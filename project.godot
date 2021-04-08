@@ -1,0 +1,26 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="Chaos Game"
+run/main_scene="res://Game.tscn"
+boot_splash/bg_color=Color( 0.12549, 0.141176, 0.192157, 1 )
+config/icon="res://icon.png"
+
+[rendering]
+
+environment/default_clear_color=Color( 0.121569, 0.0980392, 0.180392, 1 )
+environment/default_environment="res://default_env.tres"

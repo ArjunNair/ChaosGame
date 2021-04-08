@@ -1,0 +1,200 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Game.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 178.0
+margin_bottom = 599.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+margin_right = 178.0
+margin_bottom = 597.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer"]
+margin_right = 178.0
+margin_bottom = 34.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer"]
+margin_right = 178.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_right = 91.0
+margin_bottom = 14.0
+text = "Num Vertices:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NumVertices" type="Label" parent="Panel/VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 95.0
+margin_right = 95.0
+margin_bottom = 14.0
+
+[node name="VertexSlider" type="HSlider" parent="Panel/VBoxContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 178.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+max_value = 10.0
+value = 3.0
+tick_count = 10
+ticks_on_borders = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/VBoxContainer"]
+margin_top = 54.0
+margin_right = 178.0
+margin_bottom = 88.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer2"]
+margin_right = 178.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_right = 75.0
+margin_bottom = 14.0
+text = "Lerp Factor:"
+
+[node name="LerpFactor" type="Label" parent="Panel/VBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 79.0
+margin_right = 79.0
+margin_bottom = 14.0
+
+[node name="LerpSlider" type="HSlider" parent="Panel/VBoxContainer/VBoxContainer2"]
+margin_top = 18.0
+margin_right = 178.0
+margin_bottom = 34.0
+value = 50.0
+tick_count = 10
+ticks_on_borders = true
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/VBoxContainer"]
+margin_top = 108.0
+margin_right = 178.0
+margin_bottom = 142.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer3"]
+margin_right = 178.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/VBoxContainer3/HBoxContainer"]
+margin_right = 67.0
+margin_bottom = 14.0
+text = "Point size:"
+
+[node name="PointSize" type="Label" parent="Panel/VBoxContainer/VBoxContainer3/HBoxContainer"]
+margin_left = 71.0
+margin_right = 71.0
+margin_bottom = 14.0
+
+[node name="PointSizeSlider" type="HSlider" parent="Panel/VBoxContainer/VBoxContainer3"]
+margin_top = 18.0
+margin_right = 178.0
+margin_bottom = 34.0
+min_value = 1.0
+max_value = 5.0
+value = 1.0
+tick_count = 5
+ticks_on_borders = true
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Panel/VBoxContainer"]
+margin_top = 162.0
+margin_right = 178.0
+margin_bottom = 196.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer4"]
+margin_right = 178.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/VBoxContainer4/HBoxContainer"]
+margin_right = 111.0
+margin_bottom = 14.0
+text = "Orientation angle"
+
+[node name="OrientationAngle" type="Label" parent="Panel/VBoxContainer/VBoxContainer4/HBoxContainer"]
+margin_left = 115.0
+margin_right = 115.0
+margin_bottom = 14.0
+
+[node name="OrientationSlider" type="HSlider" parent="Panel/VBoxContainer/VBoxContainer4"]
+margin_top = 18.0
+margin_right = 178.0
+margin_bottom = 34.0
+max_value = 360.0
+tick_count = 50
+ticks_on_borders = true
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer"]
+margin_top = 216.0
+margin_right = 178.0
+margin_bottom = 220.0
+
+[node name="RepeatVertexCheckbox" type="CheckBox" parent="Panel/VBoxContainer"]
+margin_top = 240.0
+margin_right = 178.0
+margin_bottom = 264.0
+hint_tooltip = "Can  the newly chosen vertex to be same as previously chosen vertex?"
+text = "Do not repeat vertex"
+
+[node name="ColorVertexCheckbox" type="CheckBox" parent="Panel/VBoxContainer"]
+margin_top = 284.0
+margin_right = 178.0
+margin_bottom = 308.0
+hint_tooltip = "Can  the newly chosen vertex to be same as previously chosen vertex?"
+pressed = true
+text = "Colored points"
+
+[node name="GenerateButton" type="Button" parent="Panel"]
+margin_top = 350.0
+margin_right = 176.0
+margin_bottom = 382.0
+text = "Generate"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 860.0
+margin_top = 2.0
+margin_right = 1024.0
+margin_bottom = 42.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+margin_top = 13.0
+margin_right = 79.0
+margin_bottom = 27.0
+text = "Num Points:"
+
+[node name="PointsLabel" type="Label" parent="HBoxContainer"]
+margin_left = 83.0
+margin_top = 13.0
+margin_right = 91.0
+margin_bottom = 27.0
+text = "0"
+[connection signal="value_changed" from="Panel/VBoxContainer/VBoxContainer/VertexSlider" to="." method="_on_VertexSlider_value_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/VBoxContainer2/LerpSlider" to="." method="_on_LerpSlider_value_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/VBoxContainer3/PointSizeSlider" to="." method="_on_PointSizeSlider_value_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/VBoxContainer4/OrientationSlider" to="." method="_on_OrientationSlider_value_changed"]
+[connection signal="toggled" from="Panel/VBoxContainer/RepeatVertexCheckbox" to="." method="_on_RepeatVertexCheckbox_toggled"]
+[connection signal="toggled" from="Panel/VBoxContainer/ColorVertexCheckbox" to="." method="_on_ColorVertexCheckbox_toggled"]
+[connection signal="pressed" from="Panel/GenerateButton" to="." method="_on_GenerateButton_pressed"]
